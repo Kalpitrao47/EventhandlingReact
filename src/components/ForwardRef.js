@@ -17,3 +17,10 @@ const ForwardRef = () => {
 }
 
 export default ForwardRef
+
+
+
+// forwardRef is a feature in React that allows you to forward a ref from a child component to a 
+// DOM element or another component. 
+// It is particularly useful in scenarios where you want to access or interact with the underlying 
+// DOM element or child component from a parent component.

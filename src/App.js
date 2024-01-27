@@ -7,6 +7,7 @@ import FormValidation from './components/FormValidation';
 import ParentComponent from './components/ChildrenProps';
 import UseRef from './components/UseRef';
 import ForwardRef from './components/ForwardRef';
+import PostMethod from './components/PostMethod';
 
 
 function App() {
@@ -35,8 +36,8 @@ function App() {
   <p>Children can be any React elements or components.</p>
   </ParentComponent>*/}
 {/*<UseRef/>*/}
-  <ForwardRef/>
-
+{/*<ForwardRef/>*/}
+  <PostMethod/>
 
     </div>
   );
