@@ -8,6 +8,7 @@ import ParentComponent from './components/ChildrenProps';
 import UseRef from './components/UseRef';
 import ForwardRef from './components/ForwardRef';
 import PostMethod from './components/PostMethod';
+import HigherOrderComponent from './components/HigherOrderComponent';
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
   </ParentComponent>*/}
 {/*<UseRef/>*/}
 {/*<ForwardRef/>*/}
-  <PostMethod/>
+  {/*<PostMethod/>*/}
+  <HigherOrderComponent/>
 
     </div>
   );
