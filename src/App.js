@@ -4,11 +4,12 @@ import FormsStatic from './components/FormsStatic';
 import FormsDynamicData from './components/FormsDynamicData';
 import HideShow from './components/HideShow';
 import FormValidation from './components/FormValidation';
+import ParentComponent from './components/ChildrenProps';
+
 
 function App() {
   const [options,setOptions] = useState([]);
-  // console.log("App DAta",options)
-  
+  // console.log("App DAta",options);
   useEffect(()=>{
     fetchData();
   },[])
@@ -26,7 +27,11 @@ function App() {
        {/*  <FormsStatic/>   */}
   {/*<FormsDynamicData options={options}/>*/}
   {/*<HideShow/>*/}
-  <FormValidation/>
+  {/*<FormValidation/>*/}
+  <ParentComponent>
+  <p>These are the children of the ParentComponent.</p>
+  <p>Children can be any React elements or components.</p>
+</ParentComponent>
     </div>
   );
 }
