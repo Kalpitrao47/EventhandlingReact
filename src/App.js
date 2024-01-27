@@ -5,6 +5,7 @@ import FormsDynamicData from './components/FormsDynamicData';
 import HideShow from './components/HideShow';
 import FormValidation from './components/FormValidation';
 import ParentComponent from './components/ChildrenProps';
+import UseRef from './components/UseRef';
 
 
 function App() {
@@ -28,10 +29,11 @@ function App() {
   {/*<FormsDynamicData options={options}/>*/}
   {/*<HideShow/>*/}
   {/*<FormValidation/>*/}
-  <ParentComponent>
+  {/*<ParentComponent>
   <p>These are the children of the ParentComponent.</p>
   <p>Children can be any React elements or components.</p>
-</ParentComponent>
+  </ParentComponent>*/}
+  <UseRef/>
     </div>
   );
 }
