@@ -7,8 +7,9 @@ import FormValidation from './components/FormValidation';
 import ParentComponent from './components/ChildrenProps';
 import UseRef from './components/UseRef';
 import ForwardRef from './components/ForwardRef';
-import PostMethod from './components/PostMethod';
+import PostMethod from './HTTP METHODS/PostMethod';
 import HigherOrderComponent from './components/HigherOrderComponent';
+import DeleteMethod from './HTTP METHODS/DeleteMethod';
 
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
 {/*<UseRef/>*/}
 {/*<ForwardRef/>*/}
   {/*<PostMethod/>*/}
-  <HigherOrderComponent/>
+  {/*<HigherOrderComponent/>*/}
+  <DeleteMethod/>
 
     </div>
   );
