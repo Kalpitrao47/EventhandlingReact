@@ -6,6 +6,7 @@ import HideShow from './components/HideShow';
 import FormValidation from './components/FormValidation';
 import ParentComponent from './components/ChildrenProps';
 import UseRef from './components/UseRef';
+import ForwardRef from './components/ForwardRef';
 
 
 function App() {
@@ -33,7 +34,10 @@ function App() {
   <p>These are the children of the ParentComponent.</p>
   <p>Children can be any React elements or components.</p>
   </ParentComponent>*/}
-  <UseRef/>
+{/*<UseRef/>*/}
+  <ForwardRef/>
+
+
     </div>
   );
 }
