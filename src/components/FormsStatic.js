@@ -2,24 +2,24 @@ import React, { useState } from "react";
 
 const Forms = () => {
   const [name, setName] = useState("");
-  const [email,setEmail] = useState('');
-  const [option,setOption] = useState("");
+  const [email, setEmail] = useState("");
+  const [option, setOption] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("name", name);
-    console.log("email",email);
-    console.log("option",option);
+    console.log("email", email);
+    console.log("option", option);
     const formData = {
-        name: name,
-        email: email,
-        option: option,
-      };
-  
-      console.log("Form Data:", formData);
+      name: name,
+      email: email,
+      option: option,
+    };
+
+    console.log("Form Data:", formData);
     setName("");
     setEmail("");
-    setOption("")
+    setOption("");
   };
   return (
     <div>
@@ -36,16 +36,24 @@ const Forms = () => {
         </div>
 
         <div>
-        <label>Email:</label>
-            <input className="border border-black p-2 rounded-lg" placeholder="Email" type="email" onChange={(e)=>setEmail(e.target.value)}/>
+          <label>Email:</label>
+          <input
+            className="border border-black p-2 rounded-lg"
+            placeholder="Email"
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
 
         <div className="p-2">
           <label>Select Division:</label>
-        <select onChange={(e)=>setOption(e.target.value)} className="border border-black rounded-lg">
-        <option value="Counter">Counter</option>
-        <option value="useEffect">useEffect</option>
-        </select>
+          <select
+            onChange={(e) => setOption(e.target.value)}
+            className="border border-black rounded-lg"
+          >
+            <option value="Counter">Counter</option>
+            <option value="useEffect">useEffect</option>
+          </select>
         </div>
 
         <button

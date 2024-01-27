@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const FormsDynamicData = ({ options }) => {
-  console.log("data", options);
+  // console.log("data", options);
   const [name, setName] = useState("");
   const [email, setEmail] = useState('');
   const [option, setOption] = useState("");
