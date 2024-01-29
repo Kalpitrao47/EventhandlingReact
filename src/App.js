@@ -42,6 +42,7 @@ function App() {
   {/*<PostMethod/>*/}
   {/*<HigherOrderComponent/>*/}
   <DeleteMethod/>
+  <PostMethod/>
 
     </div>
   );

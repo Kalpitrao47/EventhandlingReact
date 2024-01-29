@@ -8,7 +8,7 @@ const DeleteMethod = () => {
   }, []);
 
   const getUsers = async () => {
-    const data = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await fetch("http://localhost:3500/users");
     const json = await data.json();
     // console.log(json);
     setUsers(json);
@@ -17,7 +17,7 @@ const DeleteMethod = () => {
   const deleteUser = async (id) => {
     try {
       const response = await fetch(
-        `https://jsonplaceholder.typicode.com/users/${id}`,
+        `http://localhost:3500/users/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -47,7 +47,6 @@ const DeleteMethod = () => {
             <th>Name</th>
             <th>Username</th>
             <th>Email</th>
-            <th>Address</th>
             <th>Remove User</th>
           </tr>
         </thead>
@@ -56,11 +55,11 @@ const DeleteMethod = () => {
             <tbody>
               <tr>
                 <td>{users.name}</td>
-                <td>{users.username}</td>
+                <td>{users.user}</td>
                 <td>{users.email}</td>
-                <td>{users.address.street}</td>
+                {/*<td>{users.address.street}</td>*/}
                 <td
-                  className="border border-black bg-slate-700 text-white"
+                  className="border border-black bg-slate-700 text-white cursor-pointer"
                   onClick={() => deleteUser(users.id)}
                 >
                   Delete User
