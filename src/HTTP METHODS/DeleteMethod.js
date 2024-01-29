@@ -3,6 +3,15 @@ import React, { useEffect, useState } from "react";
 const DeleteMethod = () => {
   const [users, setUsers] = useState([]);
   console.log("users", users);
+  const [name,setName] = useState("");
+  console.log("name", name);
+  const [user,setUser] = useState("");
+  console.log("user", user);
+  const [email,setEmail] = useState("");
+  console.log("email", email);
+  const [responseData, setResponseData] = useState([]);
+
+  
   useEffect(() => {
     getUsers();
   }, []);
@@ -12,6 +21,9 @@ const DeleteMethod = () => {
     const json = await data.json();
     // console.log(json);
     setUsers(json);
+    setName(json[0].name)
+    setUser(json[0].user)
+    setEmail(json[0].email)
   };
 
   const deleteUser = async (id) => {
@@ -39,6 +51,41 @@ const DeleteMethod = () => {
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: name,
+      user: user,
+      email: email,
+    };
+
+    try {
+      const url = 'http://localhost:3500/users';
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      setResponseData(result);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  const upDateUser = (users)=>{
+    let {name,user,email} = users
+      console.log("update user id",users)
+    //   setName(users.name)
+    // setUser(users.user)
+    // setEmail(users.email)
+    console.log("users.name",name)
+  }
+
   return (
     <div>
       <table class="table-auto">
@@ -64,11 +111,48 @@ const DeleteMethod = () => {
                 >
                   Delete User
                 </td>
+
+                <td
+                  className="border border-black bg-slate-700 text-white cursor-pointer"
+                  onClick={() => upDateUser(users)}
+                >
+                  Update User
+                </td>
+
               </tr>
             </tbody>
           );
         })}
       </table>
+      <form onSubmit={handleSubmit}>
+        <input
+          className='border border-black m-1'
+          type='text'
+          name='name'
+          placeholder='Name'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        ></input>
+        <input
+          className='border border-black m-1'
+          type='text'
+          name='username'
+          placeholder='Username'
+          value={user}
+          onChange={(e) => setUser(e.target.value)}
+        ></input>
+        <input
+          className='border border-black m-1'
+          type='email'
+          name='email'
+          placeholder='Email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        ></input>
+        <button className='border border-black ' type='submit'>
+          Submit
+        </button>
+      </form>
     </div>
   );
 };
