@@ -11,6 +11,8 @@ import PostMethod from './HTTP METHODS/PostMethod';
 import HigherOrderComponent from './components/HigherOrderComponent';
 import DeleteMethod from './HTTP METHODS/DeleteMethod';
 import TemplateComponent from './components/TemplateComponent';
+import TemplateSelector from './components/TemplateSelector';
+import TemplateSelectorDynamic from './components/TemplateSelectorDynamic';
 
 
 function App() {
@@ -44,7 +46,9 @@ function App() {
   {/*<HigherOrderComponent/>*/}
   {/*<DeleteMethod/>*/}
   {/*<PostMethod/>*/}
-  <TemplateComponent/>
+  {/*<TemplateComponent/>*/}
+  <TemplateSelector/>
+  <TemplateSelectorDynamic/>
 
     </div>
   );

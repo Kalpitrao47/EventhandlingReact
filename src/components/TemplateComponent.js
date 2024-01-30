@@ -19,38 +19,47 @@ const TemplateComponent = () => {
   };
 
   const generateTemplate = () => {
-    // You can customize this template based on your requirements
-    const generatedTemplate = `Selected values: ${dropdown1Value}, ${dropdown2Value}, ${dropdown3Value}`;
+    const generatedTemplate = `I have a ${dropdown1Value}, a ${dropdown2Value}, and a ${dropdown3Value}`;
     setTemplate(generatedTemplate);
   };
+
+  
 
   return (
     <div>
       <div>
         <label>Dropdown 1:</label>
         <select value={dropdown1Value} onChange={handleDropdown1Change}>
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-          <option value="option4">Option 4</option>
-          <option value="option5">Option 5</option>
-          {/* Add more options as needed */}
+        <option disabled value="">Select an option</option>
+          <option value="BMW">BMW</option>
+          <option value="MErcedez">MErcedez</option>
+          <option value="BEnz">BEnz</option>
+          <option value="Tavera">Tavera</option>
+          <option value="Scorpio">Scorpio</option>
+          
         </select>
       </div>
       <div>
         <label>Dropdown 2:</label>
         <select value={dropdown2Value} onChange={handleDropdown2Change}>
-          <option value="optionA">Option A</option>
-          <option value="optionB">Option B</option>
-          {/* Add more options as needed */}
+        <option disabled value="" >Select an option</option>
+          <option value="Samasung">Samasung</option>
+          <option value="Nokia">Nokia</option>
+          <option value="Blackberry">Blackberry</option>
+          <option value="redmi">redmi</option>
+          <option value="Realme">Realme</option>
+          
         </select>
       </div>
       <div>
         <label>Dropdown 3:</label>
         <select value={dropdown3Value} onChange={handleDropdown3Change}>
+        <option disabled value="">Select an option</option>
           <option value="valueX">Value X</option>
           <option value="valueY">Value Y</option>
-          {/* Add more options as needed */}
+          <option value="valueV">Value V</option>
+          <option value="valueW">Value W</option>
+          <option value="valueS">Value S</option>
         </select>
       </div>
       <button onClick={generateTemplate}>Generate Template</button>
