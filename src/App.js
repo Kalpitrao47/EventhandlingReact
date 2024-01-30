@@ -10,6 +10,7 @@ import ForwardRef from './components/ForwardRef';
 import PostMethod from './HTTP METHODS/PostMethod';
 import HigherOrderComponent from './components/HigherOrderComponent';
 import DeleteMethod from './HTTP METHODS/DeleteMethod';
+import TemplateComponent from './components/TemplateComponent';
 
 
 function App() {
@@ -41,8 +42,9 @@ function App() {
 {/*<ForwardRef/>*/}
   {/*<PostMethod/>*/}
   {/*<HigherOrderComponent/>*/}
-  <DeleteMethod/>
+  {/*<DeleteMethod/>*/}
   {/*<PostMethod/>*/}
+  <TemplateComponent/>
 
     </div>
   );
